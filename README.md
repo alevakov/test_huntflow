@@ -38,6 +38,11 @@
 
 Доступен dashboard `node_exporter` с метриками текущего хоста.
 🔥 
+
+<img width="1163" alt="image" src="https://github.com/user-attachments/assets/670e76f2-81a9-402e-be0c-415daa05a136" />
+
+
+
 <img width="1444" alt="image" src="https://github.com/user-attachments/assets/79ac5e80-f4ec-4821-8615-5b875f14d7eb" />
 
 ---
