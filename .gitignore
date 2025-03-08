@@ -1,0 +1,7 @@
+*.retry
+.ansible/
+.ansible-lint
+.vagrant/
+.DS_Store
+.git
+

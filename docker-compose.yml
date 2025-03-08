@@ -1,0 +1,35 @@
+services:
+  prometheus:
+    image: prom/prometheus:v2.38.0  # ARM64-совместимый образ Prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    restart: always
+
+  grafana:
+    image: grafana/grafana:8.5.0  # ARM64-совместимый образ Grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning  # Прокидываем настройки для автоимпорта
+    depends_on:
+      - prometheus
+    restart: always
+
+  node_exporter:
+    image: prom/node-exporter:v1.3.1
+    container_name: node_exporter
+    ports:
+      - "9100:9100"
+    restart: always
+
+volumes:
+  prometheus_data:
+  grafana_data:
