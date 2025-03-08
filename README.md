@@ -36,7 +36,7 @@
 ```Пользователь: admin ```
 ```Пароль: admin```
 
-Доступен dashboard `node_exporter` с метриками созданой vm хоста.
+Доступен dashboard `node_exporter` с метриками созданой vm.
 🔥 
 
 <img width="1163" alt="image" src="https://github.com/user-attachments/assets/670e76f2-81a9-402e-be0c-415daa05a136" />
